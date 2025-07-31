@@ -39,7 +39,7 @@ function jitter(values) {
     jitters.push(Math.abs(values[i] - values[i+1]));
   }
 
-  return average(jitters);
+  return jitters.length === 0 ? 0 : average(jitters);
 }
 
 exports.average = average;
